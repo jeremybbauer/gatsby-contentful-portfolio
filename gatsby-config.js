@@ -23,7 +23,7 @@ module.exports = {
     locale: "en",
     title: `Jeremy Bauer`,
     description: `Content design portfolio of Jeremy Bauer`,
-    author: `@johndoe`,
+    author: `Jeremy Bauer`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
