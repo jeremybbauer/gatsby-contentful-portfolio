@@ -1,4 +1,11 @@
-require("dotenv").config()
+let activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+console.log('Using environment config: ${activeEnv}')
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env
 
@@ -31,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: CONTENTFUL_SPACE_ID,
-        accessToken: CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         downloadLocal: true,
       },
     },
@@ -54,8 +61,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `John Doe`,
-        short_name: `johndoe`,
+        name: `Jeremy Bauer`,
+        short_name: `jeremybauer`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#3182ce`,

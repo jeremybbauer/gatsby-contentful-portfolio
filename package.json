@@ -3,6 +3,17 @@
   "description": "Portfolio theme for GatsbyJS",
   "version": "1.0.0",
   "author": "Jeremy Bauer <jeremybbauer@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "postinstall": "node ./bin/hello.js",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "setup": "node ./bin/setup.js",
+    "clean": "gatsby clean"
+  },
   "dependencies": {
     "autoprefixer": "^9.8.6",
     "classnames": "^2.2.6",
@@ -39,17 +50,6 @@
     "portfolio",
     "contentful"
   ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "postinstall": "node ./bin/hello.js",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "setup": "node ./bin/setup.js",
-    "clean": "gatsby clean"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jeremybbauer/gatsby-contentful-portfolio"
